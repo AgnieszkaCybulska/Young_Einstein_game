@@ -1,0 +1,314 @@
+\hypertarget{class_young___einstein_1_1_menu}{}\doxysection{Young\+\_\+\+Einstein.\+Menu Class Reference}
+\label{class_young___einstein_1_1_menu}\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+
+
+\mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}} sluzy do wyswietlania podstawowych opcji sluzacych do rozpoczecia rozgrywki oraz do zapisu i odczytu otrzymanych wynikow.  
+
+
+Inheritance diagram for Young\+\_\+\+Einstein.\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_young___einstein_1_1_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_young___einstein_1_1_menu_a1702ceef46ef20f88a0b5439f3039fb3}{Menu}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor inicjalizuje komponenty, sprawdza czy istnieje plik z uprzednio zapisanymi wynikami gry -\/ jesli tak to go odczytuje. Jesli zapisana wartosc w tym pliku jest rozna od 1 lub jest mniejsza od maksymalnego poziomu gry to pojawia sie przycisk \char`\"{}\+Kontynuuj\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_young___einstein_1_1_menu_a19f74e954fb52682078cbb73f2f5f663}{runda}}
+\begin{DoxyCompactList}\small\item\em Publiczna zmienna calkowita wykorzytywana do podania wartosci na ktorej skonczyla sie runda. To wartosc ktora jest zapisywana do pliku. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_young___einstein_1_1_menu_a989a65d837a7f7a5cb40ce5166ac008c}{kontynuuj}} = 1
+\begin{DoxyCompactList}\small\item\em Publiczna zmienna calkowita wykorzystywana jest w celu przepisania jej do numeru rundy, na ktorym zakonczono gre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_young___einstein_1_1_menu_a253428f5ee6bb9c61394400a6a695b79}{klikniecie\+\_\+kontynuuj}} = false
+\begin{DoxyCompactList}\small\item\em Publiczna zmienna typu logicznego, ktora wykorzystywana jest w klasie \char`\"{}\+Gra\char`\"{} -\/ sprawdza czy nacisnieto przycisk KONTYNUUJ. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_young___einstein_1_1_menu_af058277889ee80f3df8c5d30499d938e}{klikniecie\+\_\+rozpocznij}} = false
+\begin{DoxyCompactList}\small\item\em Publiczna zmienna typu logicznego, ktora wykorzystywana jest w klasie \char`\"{}\+Gra\char`\"{} -\/ sprawdza czy nacisnieto przycisk ROZPOCZNIJ GRE. \end{DoxyCompactList}\item 
+System.\+Windows.\+Forms.\+Button \mbox{\hyperlink{class_young___einstein_1_1_menu_a70c678232751df5425cd96075762ce28}{zapisz}}
+\begin{DoxyCompactList}\small\item\em Publiczny przycisk \char`\"{}zapisz\char`\"{} pozwala na zapisanie numeru rundy w klasie \mbox{\hyperlink{class_young___einstein_1_1_gra}{Gra}}, po zamknieciu jej okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_young___einstein_1_1_menu_a8090510e56698daa3f3b774344779b74}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Wyczysc wszystkie uzywane zasoby. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_ada3ecf329738e25aa4f2de5722dd4830}{rozpocznij\+\_\+gre\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Nacisniecie przycisku powoduje otworzenie nowego okna, w ktorym zrealizowana jest gra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_aa66b69b3deadd71a68246b70583f77f2}{wyjdz\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Przycisk, ktory pozwala na zamkniecie programu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_a2d6155ce3e5b41a027558e1a0adab1a3}{zapisz\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Nacisniecie przycisku powoduje zapisanie w pliku wynik\+\_\+gry.\+txt numeru rundy, na ktorym zakonczono gre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_afcd8022b6d4efe2cfbf4f08d1a6ba2c6}{odczyt}} ()
+\begin{DoxyCompactList}\small\item\em Metoda \mbox{\hyperlink{class_young___einstein_1_1_menu_afcd8022b6d4efe2cfbf4f08d1a6ba2c6}{odczyt()}} pozwala na odczytanie z pliku wynik\+\_\+gry.\+txtx wartosci przechowujacej zapisany podczas poprzedniej gry poziom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_af10b0023cbb6800d3b73d5bac6fa5231}{kontynuuj\+\_\+gre\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Po ponownym otwarciu aplikacji, jesli zapisany poziom gry jest rozny od poziomu pierwszego, to mozna kontynuuowac rozgrywke, na poziomie, na ktorym skonczylo sie gre poprzednim razem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_a00a1a9dec2488b5a28ed8a19bb053b97}{informacje\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Wyswietla informacje o programie i wyswietla guzik zamykajacy informacje. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_ad0e1b6103d96d3edd9d85441d7cc38eb}{zamknij\+\_\+informacje\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Zamyka okno z informacjami o programie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_menu_a78a3cce261176a2a72c30ed53db9716a}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Metoda wymagana do obslugi projektanta — nie nalezy modyfikowac jej zawartosci w edytorze kodu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+System.\+Component\+Model.\+IContainer \mbox{\hyperlink{class_young___einstein_1_1_menu_a45f0c5830403196f4c215c31f7666a15}{components}} = null
+\begin{DoxyCompactList}\small\item\em Wymagana zmienna projektanta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_ae56ae85bb4946b8f49fe3f9a4b8418ec}\label{class_young___einstein_1_1_menu_ae56ae85bb4946b8f49fe3f9a4b8418ec}} 
+System.\+Windows.\+Forms.\+Label {\bfseries autor}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a8b4e5c2611d77d3ae1fdd18e0a1098aa}\label{class_young___einstein_1_1_menu_a8b4e5c2611d77d3ae1fdd18e0a1098aa}} 
+System.\+Windows.\+Forms.\+Label {\bfseries tytul}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a3f587d46d02f6c10dde7674c8de2c9d5}\label{class_young___einstein_1_1_menu_a3f587d46d02f6c10dde7674c8de2c9d5}} 
+System.\+Windows.\+Forms.\+Label {\bfseries opis}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a5cda2c9e9dfd4941ccba8df64c2fb885}\label{class_young___einstein_1_1_menu_a5cda2c9e9dfd4941ccba8df64c2fb885}} 
+System.\+Windows.\+Forms.\+Button {\bfseries informacje}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a1c0d030813f40ca6273243f5cfd17184}\label{class_young___einstein_1_1_menu_a1c0d030813f40ca6273243f5cfd17184}} 
+System.\+Windows.\+Forms.\+Label {\bfseries tekst\+\_\+informacji}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a1a797e581df0ef984639f4f09c296e80}\label{class_young___einstein_1_1_menu_a1a797e581df0ef984639f4f09c296e80}} 
+System.\+Windows.\+Forms.\+Button {\bfseries zamknij\+\_\+informacje}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_acd3275bed1c1c35dda118027da695031}\label{class_young___einstein_1_1_menu_acd3275bed1c1c35dda118027da695031}} 
+System.\+Windows.\+Forms.\+Button {\bfseries rozpocznij\+\_\+gre}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a345d7aa04dde24377c66dadf2ff3edaa}\label{class_young___einstein_1_1_menu_a345d7aa04dde24377c66dadf2ff3edaa}} 
+System.\+Windows.\+Forms.\+Button {\bfseries wyjdz}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a9f3198ddcab5b5a56c733e18091f461d}\label{class_young___einstein_1_1_menu_a9f3198ddcab5b5a56c733e18091f461d}} 
+System.\+Windows.\+Forms.\+Button {\bfseries kontynuuj\+\_\+gre}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}} sluzy do wyswietlania podstawowych opcji sluzacych do rozpoczecia rozgrywki oraz do zapisu i odczytu otrzymanych wynikow. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a1702ceef46ef20f88a0b5439f3039fb3}\label{class_young___einstein_1_1_menu_a1702ceef46ef20f88a0b5439f3039fb3}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Young\+\_\+\+Einstein.\+Menu.\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor inicjalizuje komponenty, sprawdza czy istnieje plik z uprzednio zapisanymi wynikami gry -\/ jesli tak to go odczytuje. Jesli zapisana wartosc w tym pliku jest rozna od 1 lub jest mniejsza od maksymalnego poziomu gry to pojawia sie przycisk \char`\"{}\+Kontynuuj\char`\"{}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a8090510e56698daa3f3b774344779b74}\label{class_young___einstein_1_1_menu_a8090510e56698daa3f3b774344779b74}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void Young\+\_\+\+Einstein.\+Menu.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Wyczysc wszystkie uzywane zasoby. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & prawda, jezeli zarzadzane zasoby powinny zostac zlikwidowane; Falsz w przeciwnym wypadku.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a00a1a9dec2488b5a28ed8a19bb053b97}\label{class_young___einstein_1_1_menu_a00a1a9dec2488b5a28ed8a19bb053b97}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!informacje\_Click@{informacje\_Click}}
+\index{informacje\_Click@{informacje\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{informacje\_Click()}{informacje\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+informacje\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wyswietla informacje o programie i wyswietla guzik zamykajacy informacje. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a78a3cce261176a2a72c30ed53db9716a}\label{class_young___einstein_1_1_menu_a78a3cce261176a2a72c30ed53db9716a}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda wymagana do obslugi projektanta — nie nalezy modyfikowac jej zawartosci w edytorze kodu. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_af10b0023cbb6800d3b73d5bac6fa5231}\label{class_young___einstein_1_1_menu_af10b0023cbb6800d3b73d5bac6fa5231}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!kontynuuj\_gre\_Click@{kontynuuj\_gre\_Click}}
+\index{kontynuuj\_gre\_Click@{kontynuuj\_gre\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{kontynuuj\_gre\_Click()}{kontynuuj\_gre\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+kontynuuj\+\_\+gre\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Po ponownym otwarciu aplikacji, jesli zapisany poziom gry jest rozny od poziomu pierwszego, to mozna kontynuuowac rozgrywke, na poziomie, na ktorym skonczylo sie gre poprzednim razem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_afcd8022b6d4efe2cfbf4f08d1a6ba2c6}\label{class_young___einstein_1_1_menu_afcd8022b6d4efe2cfbf4f08d1a6ba2c6}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!odczyt@{odczyt}}
+\index{odczyt@{odczyt}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{odczyt()}{odczyt()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+odczyt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda \mbox{\hyperlink{class_young___einstein_1_1_menu_afcd8022b6d4efe2cfbf4f08d1a6ba2c6}{odczyt()}} pozwala na odczytanie z pliku wynik\+\_\+gry.\+txtx wartosci przechowujacej zapisany podczas poprzedniej gry poziom. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_ada3ecf329738e25aa4f2de5722dd4830}\label{class_young___einstein_1_1_menu_ada3ecf329738e25aa4f2de5722dd4830}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!rozpocznij\_gre\_Click@{rozpocznij\_gre\_Click}}
+\index{rozpocznij\_gre\_Click@{rozpocznij\_gre\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{rozpocznij\_gre\_Click()}{rozpocznij\_gre\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+rozpocznij\+\_\+gre\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nacisniecie przycisku powoduje otworzenie nowego okna, w ktorym zrealizowana jest gra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_aa66b69b3deadd71a68246b70583f77f2}\label{class_young___einstein_1_1_menu_aa66b69b3deadd71a68246b70583f77f2}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!wyjdz\_Click@{wyjdz\_Click}}
+\index{wyjdz\_Click@{wyjdz\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{wyjdz\_Click()}{wyjdz\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+wyjdz\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk, ktory pozwala na zamkniecie programu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_ad0e1b6103d96d3edd9d85441d7cc38eb}\label{class_young___einstein_1_1_menu_ad0e1b6103d96d3edd9d85441d7cc38eb}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!zamknij\_informacje\_Click@{zamknij\_informacje\_Click}}
+\index{zamknij\_informacje\_Click@{zamknij\_informacje\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{zamknij\_informacje\_Click()}{zamknij\_informacje\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+zamknij\+\_\+informacje\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zamyka okno z informacjami o programie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a2d6155ce3e5b41a027558e1a0adab1a3}\label{class_young___einstein_1_1_menu_a2d6155ce3e5b41a027558e1a0adab1a3}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!zapisz\_Click@{zapisz\_Click}}
+\index{zapisz\_Click@{zapisz\_Click}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{zapisz\_Click()}{zapisz\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Menu.\+zapisz\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Nacisniecie przycisku powoduje zapisanie w pliku wynik\+\_\+gry.\+txt numeru rundy, na ktorym zakonczono gre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a45f0c5830403196f4c215c31f7666a15}\label{class_young___einstein_1_1_menu_a45f0c5830403196f4c215c31f7666a15}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!components@{components}}
+\index{components@{components}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily System.\+Component\+Model.\+IContainer Young\+\_\+\+Einstein.\+Menu.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wymagana zmienna projektanta. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a253428f5ee6bb9c61394400a6a695b79}\label{class_young___einstein_1_1_menu_a253428f5ee6bb9c61394400a6a695b79}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!klikniecie\_kontynuuj@{klikniecie\_kontynuuj}}
+\index{klikniecie\_kontynuuj@{klikniecie\_kontynuuj}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{klikniecie\_kontynuuj}{klikniecie\_kontynuuj}}
+{\footnotesize\ttfamily bool Young\+\_\+\+Einstein.\+Menu.\+klikniecie\+\_\+kontynuuj = false}
+
+
+
+Publiczna zmienna typu logicznego, ktora wykorzystywana jest w klasie \char`\"{}\+Gra\char`\"{} -\/ sprawdza czy nacisnieto przycisk KONTYNUUJ. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_af058277889ee80f3df8c5d30499d938e}\label{class_young___einstein_1_1_menu_af058277889ee80f3df8c5d30499d938e}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!klikniecie\_rozpocznij@{klikniecie\_rozpocznij}}
+\index{klikniecie\_rozpocznij@{klikniecie\_rozpocznij}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{klikniecie\_rozpocznij}{klikniecie\_rozpocznij}}
+{\footnotesize\ttfamily bool Young\+\_\+\+Einstein.\+Menu.\+klikniecie\+\_\+rozpocznij = false}
+
+
+
+Publiczna zmienna typu logicznego, ktora wykorzystywana jest w klasie \char`\"{}\+Gra\char`\"{} -\/ sprawdza czy nacisnieto przycisk ROZPOCZNIJ GRE. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a989a65d837a7f7a5cb40ce5166ac008c}\label{class_young___einstein_1_1_menu_a989a65d837a7f7a5cb40ce5166ac008c}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!kontynuuj@{kontynuuj}}
+\index{kontynuuj@{kontynuuj}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{kontynuuj}{kontynuuj}}
+{\footnotesize\ttfamily int Young\+\_\+\+Einstein.\+Menu.\+kontynuuj = 1}
+
+
+
+Publiczna zmienna calkowita wykorzystywana jest w celu przepisania jej do numeru rundy, na ktorym zakonczono gre. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a19f74e954fb52682078cbb73f2f5f663}\label{class_young___einstein_1_1_menu_a19f74e954fb52682078cbb73f2f5f663}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!runda@{runda}}
+\index{runda@{runda}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{runda}{runda}}
+{\footnotesize\ttfamily int Young\+\_\+\+Einstein.\+Menu.\+runda}
+
+
+
+Publiczna zmienna calkowita wykorzytywana do podania wartosci na ktorej skonczyla sie runda. To wartosc ktora jest zapisywana do pliku. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_menu_a70c678232751df5425cd96075762ce28}\label{class_young___einstein_1_1_menu_a70c678232751df5425cd96075762ce28}} 
+\index{Young\_Einstein.Menu@{Young\_Einstein.Menu}!zapisz@{zapisz}}
+\index{zapisz@{zapisz}!Young\_Einstein.Menu@{Young\_Einstein.Menu}}
+\doxysubsubsection{\texorpdfstring{zapisz}{zapisz}}
+{\footnotesize\ttfamily System.\+Windows.\+Forms.\+Button Young\+\_\+\+Einstein.\+Menu.\+zapisz}
+
+
+
+Publiczny przycisk \char`\"{}zapisz\char`\"{} pozwala na zapisanie numeru rundy w klasie \mbox{\hyperlink{class_young___einstein_1_1_gra}{Gra}}, po zamknieciu jej okna. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/agnie/\+Desktop/young\+\_\+\+Einstein2/\+Young\+\_\+\+Einstein/Menu.\+cs\item 
+C\+:/\+Users/agnie/\+Desktop/young\+\_\+\+Einstein2/\+Young\+\_\+\+Einstein/Menu.\+Designer.\+cs\end{DoxyCompactItemize}

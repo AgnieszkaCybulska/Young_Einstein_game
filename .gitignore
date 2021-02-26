@@ -1,0 +1,6 @@
+*.sln
+.vs/
+.gra/
+.res/
+src/*.resx
+src/*.csproj

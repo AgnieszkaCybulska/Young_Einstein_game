@@ -1,0 +1,366 @@
+\hypertarget{class_young___einstein_1_1_gra}{}\doxysection{Young\+\_\+\+Einstein.\+Gra Class Reference}
+\label{class_young___einstein_1_1_gra}\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+
+
+Klasa \mbox{\hyperlink{class_young___einstein_1_1_gra}{Gra}} gromadzi w sobie wszystkie, najpotrzebniejsze metody konieczne w realizacji aplikacji.  
+
+
+Inheritance diagram for Young\+\_\+\+Einstein.\+Gra\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_young___einstein_1_1_gra}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_young___einstein_1_1_gra_a11dc51c6ea82142e100b2748e08e0d3c}{Gra}} (\mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}} menu)
+\begin{DoxyCompactList}\small\item\em Konstrukotr inicjalizuje komponenty, nadaje numer rundy w zaleznosci od odczytanej wartosci. Sprawdza ilosc dzialan na runde i ustawia nowa gre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_young___einstein_1_1_gra_af689ff3c38ca23c4b73230a26568cd56}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_ab4298d42ce62149a05104a67292a15d8}{ustawianie\+\_\+nowej\+\_\+gry}} ()
+\begin{DoxyCompactList}\small\item\em Generowanie nowej gry -\/ metoda ustawia poczatkowy tekst na kartach. Stosowana jest na rozpoczecie kazdego poziomu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_aca637f92500b58e290c1d3ff5df59da6}{zerowanie\+\_\+kart}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zeruje wszystkie karty. Stosowana w momencie przejscia do nastepnego poziomu badz przegrania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_a64abae90baefd1666fb96e79063a3086}{dzialania\+\_\+w\+\_\+rundzie}} ()
+\begin{DoxyCompactList}\small\item\em Metoda okresla ilosc dzialan przewidzianych na runde. Przypisuje liczbe dzialan w zaleznosci od numeru rundy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_aaf62890e20afa444a566553278b9a664}{czy\+\_\+nastepna\+\_\+runda}} ()
+\begin{DoxyCompactList}\small\item\em To zlozona metoda, ktorej zadaniem jest sprawdzenie czy powinnismy przejsc do kolejnego poziomu gry. Jesli w poczekalni znajduje sie karta, a liczba dzialan do konca gry jest mniejsza badz rowna 1 to nalezy wyzerowac karte akcji. Jesli wykonano ostatnie dzialanie w danej rundzie, to zwiekszamy level gry i zerujemy karty. Po przejsciu 10. poziomu otrzymujemy komunikat o wygranej grze. Jesli natomiast nie doszlismy do 10. poziomu to otrzymujemy komunikat o wygranym poziomie. Po 5. poziomie karty podstawowe zamieniamy na karty zaawansowane (dodajemy magiczne karty do rozgrywki), prawdopodobienstwo tej zamiany kart wynosi 25\%. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_young___einstein_1_1_gra_a01a14f2bebdca23bc71702f09b3071b3}{suma\+\_\+kart\+\_\+akcja\+\_\+wynik}} (string liczba\+\_\+na\+\_\+karcie\+\_\+akcji)
+\begin{DoxyCompactList}\small\item\em Oblicza sume liczby z karty akcji i liczby z karty wyniku \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_young___einstein_1_1_gra_ac438de23fb83f9bef1a083ef02922a34}{suma\+\_\+kart\+\_\+poczekalnia\+\_\+wynik}} ()
+\begin{DoxyCompactList}\small\item\em Oblicza sume liczby z karty znajdujacej sie w poczeklani i liczby z karty wyniku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_afb61aadbfe048d8536269f864d053f6d}{usuniecie\+\_\+losowosci}} (int akcja\+\_\+wynik)
+\begin{DoxyCompactList}\small\item\em Usuwa losowosc z gry -\/ nastepuje generowanie nowej liczby na karcie akcji w momnecie gdy zostanie spelniony warunek\+: 0 $>$ akcja + wynik $>$ 20 i 0 $>$ poczekalnia + wynik $>$ 20 lub jesli zostanie spelniony warunek\+: 0 $>$ akcja + poczekalnia + wynik $>$ 20 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_a26b1eb7dca4caefb5aa5b2e97b0cb183}{tekst\+\_\+karty\+\_\+akcji}} ()
+\begin{DoxyCompactList}\small\item\em Generuje karte akcji i zmienia jej tekst w zaleznosci od otrzymanej wartosci. Oblicza sume kart akcja + wynik dla nowo wygenerowanej karty i usuwa z gry losowosc -\/ jesli karta nie spelnia okreslonych warunkow to losowana jest nowa karta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_a4085840a993aaa2f36f5c8896136b57b}{tekst\+\_\+karty\+\_\+wyniku}} ()
+\begin{DoxyCompactList}\small\item\em Jesli karta akcji jest magiczna, to po jej uzyciu, karta wyniku zmienia sie wedle wybranej operacji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_a859ac8e2739c761793ec54e68e041243}{wykonaj\+\_\+dzialanie\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Obsluga przycisku \char`\"{}\+WYKONAJ DZIAl\+ANIE\char`\"{}. Jesli w karcie akcji umieszczona jest jakas liczba, to po uzyciu tego przycisku obecna karta akcji jest dodawana do aktualnej karty wyniku. Jendoczesnie generowana jest nowa karta akcji i zmniejsza sie liczba dzialan w rundzie o jeden. Metoda \char`\"{}czy\+\_\+nastepna\+\_\+runda()\char`\"{} sprawdzam, czy powinna juz nastapic wygrana, czy jeszcze nie. Jesli suma liczb z karty akcji i z karty wyniku da liczbe spoza zakresu od 0 do 20, to pojawia sie komunikat o przegranej z mozliwoscia powtorzenia poziomu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_aca1f3edea30d4f52dfb39eb177179c85}{odloz\+\_\+karte\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Obsluga przycisku \char`\"{}\+ODloz KARTe\char`\"{}. Jesli w poczekalni nie znajduje sie zadna innna karta, to mozemy odlozyc tam karte akcji. Po odlozeniu karty akcji do poczekalni generowana jest nowa karta akcji, chyba ze pozostalo tylko jedno dzialanie do konca rundy -\/ w takim wypadku nie generujemy kolejnej karty akcji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_ae3061012e602a9c4a6272231ba982baf}{uzyj\+\_\+karty\+\_\+czekajacej\+\_\+\+Click}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Obsluga przycisku \char`\"{}\+WEz KARTe\char`\"{} Jesli w poczeklani kart znajduje sie jakas karta, to mozemy nacisnac przycisk -\/ wez karte -\/ aby jej uzyc. Sprawdzamy czy suma kart poczekalnia + wynik wyjdzie poza zakres od 0 do 20. Jesli wynik sumy znajduje sie w przedziale to karta z poczekalni dodawana jest do karty wyniku i zmniejsza sie liczba dzialan do konca rundy. Jesli natomiast suma wychodzi poza zadany zakres -\/ to pojawia sie komunikat o przegranej grze z mozliwoscia powtorzenia poziomu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_ac183e4a28a3c7c6a5cf8ad6d317c5215}{timer1\+\_\+\+Tick}} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Mierzy czas podczas rundy i wypisuje go na ekran. Interwal zegara jest ustawiony na 50ms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_young___einstein_1_1_gra_aefb9f5558a7fc4ecbecd5c31d950993a}{Initialize\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a6ed1ec3f389b0844a58038d8e6295631}\label{class_young___einstein_1_1_gra_a6ed1ec3f389b0844a58038d8e6295631}} 
+\mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}} {\bfseries menu}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a940642a7616619488ebf5162172e72e1}\label{class_young___einstein_1_1_gra_a940642a7616619488ebf5162172e72e1}} 
+int {\bfseries suma} = 0
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a98c23fdc7935871a9a11c7afcf4ebf62}\label{class_young___einstein_1_1_gra_a98c23fdc7935871a9a11c7afcf4ebf62}} 
+int {\bfseries liczba\+\_\+dzialan}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_adb40d8bb63dfc3e550912d33a520f569}\label{class_young___einstein_1_1_gra_adb40d8bb63dfc3e550912d33a520f569}} 
+int {\bfseries ile\+\_\+dzialan} = 4
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ac93adfe124151b6b003023b3b962e997}\label{class_young___einstein_1_1_gra_ac93adfe124151b6b003023b3b962e997}} 
+bool {\bfseries uzycie\+\_\+karty\+\_\+z\+\_\+poczekalni} = false
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a9e9dfecec5552892c01afea4e7cb7646}\label{class_young___einstein_1_1_gra_a9e9dfecec5552892c01afea4e7cb7646}} 
+bool {\bfseries wykonanie\+\_\+karty} = false
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a9557ebd501d014cc9610d6b23856e4f6}\label{class_young___einstein_1_1_gra_a9557ebd501d014cc9610d6b23856e4f6}} 
+Random {\bfseries random} = new Random()
+\item 
+System.\+Component\+Model.\+IContainer \mbox{\hyperlink{class_young___einstein_1_1_gra_a79b166ecb0276ddc7757c685950edf63}{components}} = null
+\begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a3dedf914d35a0733b7bbcb7c082c621e}\label{class_young___einstein_1_1_gra_a3dedf914d35a0733b7bbcb7c082c621e}} 
+\mbox{\hyperlink{class_young___einstein_1_1_akcje__kart}{Akcje\+\_\+kart}} {\bfseries akcje} = new \mbox{\hyperlink{class_young___einstein_1_1_akcje__kart}{Akcje\+\_\+kart}}()
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aad5537e53ac92e7547ce33aff5d25c9e}\label{class_young___einstein_1_1_gra_aad5537e53ac92e7547ce33aff5d25c9e}} 
+List$<$ int $>$ {\bfseries karty\+\_\+podstawowe} = \mbox{\hyperlink{class_young___einstein_1_1_akcje__kart_a4aba3f981c0625467de50222207ba7e2}{Akcje\+\_\+kart.\+zestaw\+\_\+kart}}()
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aa636bd2a241768059847b2396ae86cb6}\label{class_young___einstein_1_1_gra_aa636bd2a241768059847b2396ae86cb6}} 
+int {\bfseries numer\+\_\+rundy} = 1
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_af5f9059020aaafd7feb8971b09c6f703}\label{class_young___einstein_1_1_gra_af5f9059020aaafd7feb8971b09c6f703}} 
+double {\bfseries czas\+\_\+timera} = 0
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a13897655463ed170811b4ba1521e5180}\label{class_young___einstein_1_1_gra_a13897655463ed170811b4ba1521e5180}} 
+System.\+Windows.\+Forms.\+Button {\bfseries wykonaj\+\_\+dzialanie}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a68077cb08afe0b414196e5aa2c3d9b0a}\label{class_young___einstein_1_1_gra_a68077cb08afe0b414196e5aa2c3d9b0a}} 
+System.\+Windows.\+Forms.\+Button {\bfseries odloz\+\_\+karte}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a8f4ed2563d61c546b927163bd95b7f88}\label{class_young___einstein_1_1_gra_a8f4ed2563d61c546b927163bd95b7f88}} 
+System.\+Windows.\+Forms.\+Button {\bfseries uzyj\+\_\+karty\+\_\+czekajacej}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a16f8db1f35d4a33a446fd858a34a4b09}\label{class_young___einstein_1_1_gra_a16f8db1f35d4a33a446fd858a34a4b09}} 
+System.\+Windows.\+Forms.\+Label {\bfseries karta\+\_\+akcji}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a5f72b56b690c9f99d7ebb0c418547bdd}\label{class_young___einstein_1_1_gra_a5f72b56b690c9f99d7ebb0c418547bdd}} 
+System.\+Windows.\+Forms.\+Label {\bfseries poczekalnia\+\_\+kart}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a1e400399049b7d72adf56e39a58d5276}\label{class_young___einstein_1_1_gra_a1e400399049b7d72adf56e39a58d5276}} 
+System.\+Windows.\+Forms.\+Label {\bfseries karta\+\_\+wyniku}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a58a835e5c9c836e6f8fbc6ceec95d282}\label{class_young___einstein_1_1_gra_a58a835e5c9c836e6f8fbc6ceec95d282}} 
+System.\+Windows.\+Forms.\+Label {\bfseries ktora\+\_\+runda}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ab2e34024c8885670d5f52c258ca65450}\label{class_young___einstein_1_1_gra_ab2e34024c8885670d5f52c258ca65450}} 
+System.\+Windows.\+Forms.\+Timer {\bfseries timer1}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ac560de949d28f89b2936f809b67d6475}\label{class_young___einstein_1_1_gra_ac560de949d28f89b2936f809b67d6475}} 
+System.\+Windows.\+Forms.\+Label {\bfseries czas}
+\item 
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a0e7b69d172dbedd4a6b30dcb9e56a9ff}\label{class_young___einstein_1_1_gra_a0e7b69d172dbedd4a6b30dcb9e56a9ff}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries puchar}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_young___einstein_1_1_gra}{Gra}} gromadzi w sobie wszystkie, najpotrzebniejsze metody konieczne w realizacji aplikacji. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a11dc51c6ea82142e100b2748e08e0d3c}\label{class_young___einstein_1_1_gra_a11dc51c6ea82142e100b2748e08e0d3c}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!Gra@{Gra}}
+\index{Gra@{Gra}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{Gra()}{Gra()}}
+{\footnotesize\ttfamily Young\+\_\+\+Einstein.\+Gra.\+Gra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}}}]{menu }\end{DoxyParamCaption})}
+
+
+
+Konstrukotr inicjalizuje komponenty, nadaje numer rundy w zaleznosci od odczytanej wartosci. Sprawdza ilosc dzialan na runde i ustawia nowa gre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Argumentem jest zmienna typu \mbox{\hyperlink{class_young___einstein_1_1_menu}{Menu}}\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aaf62890e20afa444a566553278b9a664}\label{class_young___einstein_1_1_gra_aaf62890e20afa444a566553278b9a664}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!czy\_nastepna\_runda@{czy\_nastepna\_runda}}
+\index{czy\_nastepna\_runda@{czy\_nastepna\_runda}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{czy\_nastepna\_runda()}{czy\_nastepna\_runda()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+czy\+\_\+nastepna\+\_\+runda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+To zlozona metoda, ktorej zadaniem jest sprawdzenie czy powinnismy przejsc do kolejnego poziomu gry. Jesli w poczekalni znajduje sie karta, a liczba dzialan do konca gry jest mniejsza badz rowna 1 to nalezy wyzerowac karte akcji. Jesli wykonano ostatnie dzialanie w danej rundzie, to zwiekszamy level gry i zerujemy karty. Po przejsciu 10. poziomu otrzymujemy komunikat o wygranej grze. Jesli natomiast nie doszlismy do 10. poziomu to otrzymujemy komunikat o wygranym poziomie. Po 5. poziomie karty podstawowe zamieniamy na karty zaawansowane (dodajemy magiczne karty do rozgrywki), prawdopodobienstwo tej zamiany kart wynosi 25\%. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_af689ff3c38ca23c4b73230a26568cd56}\label{class_young___einstein_1_1_gra_af689ff3c38ca23c4b73230a26568cd56}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily override void Young\+\_\+\+Einstein.\+Gra.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a64abae90baefd1666fb96e79063a3086}\label{class_young___einstein_1_1_gra_a64abae90baefd1666fb96e79063a3086}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!dzialania\_w\_rundzie@{dzialania\_w\_rundzie}}
+\index{dzialania\_w\_rundzie@{dzialania\_w\_rundzie}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{dzialania\_w\_rundzie()}{dzialania\_w\_rundzie()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+dzialania\+\_\+w\+\_\+rundzie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda okresla ilosc dzialan przewidzianych na runde. Przypisuje liczbe dzialan w zaleznosci od numeru rundy. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aefb9f5558a7fc4ecbecd5c31d950993a}\label{class_young___einstein_1_1_gra_aefb9f5558a7fc4ecbecd5c31d950993a}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!InitializeComponent@{InitializeComponent}}
+\index{InitializeComponent@{InitializeComponent}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{InitializeComponent()}{InitializeComponent()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+Initialize\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required method for Designer support -\/ do not modify the contents of this method with the code editor. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aca1f3edea30d4f52dfb39eb177179c85}\label{class_young___einstein_1_1_gra_aca1f3edea30d4f52dfb39eb177179c85}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!odloz\_karte\_Click@{odloz\_karte\_Click}}
+\index{odloz\_karte\_Click@{odloz\_karte\_Click}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{odloz\_karte\_Click()}{odloz\_karte\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+odloz\+\_\+karte\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obsluga przycisku \char`\"{}\+ODloz KARTe\char`\"{}. Jesli w poczekalni nie znajduje sie zadna innna karta, to mozemy odlozyc tam karte akcji. Po odlozeniu karty akcji do poczekalni generowana jest nowa karta akcji, chyba ze pozostalo tylko jedno dzialanie do konca rundy -\/ w takim wypadku nie generujemy kolejnej karty akcji 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a01a14f2bebdca23bc71702f09b3071b3}\label{class_young___einstein_1_1_gra_a01a14f2bebdca23bc71702f09b3071b3}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!suma\_kart\_akcja\_wynik@{suma\_kart\_akcja\_wynik}}
+\index{suma\_kart\_akcja\_wynik@{suma\_kart\_akcja\_wynik}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{suma\_kart\_akcja\_wynik()}{suma\_kart\_akcja\_wynik()}}
+{\footnotesize\ttfamily int Young\+\_\+\+Einstein.\+Gra.\+suma\+\_\+kart\+\_\+akcja\+\_\+wynik (\begin{DoxyParamCaption}\item[{string}]{liczba\+\_\+na\+\_\+karcie\+\_\+akcji }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Oblicza sume liczby z karty akcji i liczby z karty wyniku 
+
+
+\begin{DoxyParams}{Parameters}
+{\em liczba\+\_\+na\+\_\+karcie\+\_\+akcji} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ac438de23fb83f9bef1a083ef02922a34}\label{class_young___einstein_1_1_gra_ac438de23fb83f9bef1a083ef02922a34}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!suma\_kart\_poczekalnia\_wynik@{suma\_kart\_poczekalnia\_wynik}}
+\index{suma\_kart\_poczekalnia\_wynik@{suma\_kart\_poczekalnia\_wynik}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{suma\_kart\_poczekalnia\_wynik()}{suma\_kart\_poczekalnia\_wynik()}}
+{\footnotesize\ttfamily int Young\+\_\+\+Einstein.\+Gra.\+suma\+\_\+kart\+\_\+poczekalnia\+\_\+wynik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Oblicza sume liczby z karty znajdujacej sie w poczeklani i liczby z karty wyniku 
+
+\begin{DoxyReturn}{Returns}
+Zwraca sume liczb z karty w poczekalni i z karty wyniku
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a26b1eb7dca4caefb5aa5b2e97b0cb183}\label{class_young___einstein_1_1_gra_a26b1eb7dca4caefb5aa5b2e97b0cb183}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!tekst\_karty\_akcji@{tekst\_karty\_akcji}}
+\index{tekst\_karty\_akcji@{tekst\_karty\_akcji}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{tekst\_karty\_akcji()}{tekst\_karty\_akcji()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+tekst\+\_\+karty\+\_\+akcji (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generuje karte akcji i zmienia jej tekst w zaleznosci od otrzymanej wartosci. Oblicza sume kart akcja + wynik dla nowo wygenerowanej karty i usuwa z gry losowosc -\/ jesli karta nie spelnia okreslonych warunkow to losowana jest nowa karta. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a4085840a993aaa2f36f5c8896136b57b}\label{class_young___einstein_1_1_gra_a4085840a993aaa2f36f5c8896136b57b}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!tekst\_karty\_wyniku@{tekst\_karty\_wyniku}}
+\index{tekst\_karty\_wyniku@{tekst\_karty\_wyniku}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{tekst\_karty\_wyniku()}{tekst\_karty\_wyniku()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+tekst\+\_\+karty\+\_\+wyniku (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Jesli karta akcji jest magiczna, to po jej uzyciu, karta wyniku zmienia sie wedle wybranej operacji 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ac183e4a28a3c7c6a5cf8ad6d317c5215}\label{class_young___einstein_1_1_gra_ac183e4a28a3c7c6a5cf8ad6d317c5215}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!timer1\_Tick@{timer1\_Tick}}
+\index{timer1\_Tick@{timer1\_Tick}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{timer1\_Tick()}{timer1\_Tick()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+timer1\+\_\+\+Tick (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mierzy czas podczas rundy i wypisuje go na ekran. Interwal zegara jest ustawiony na 50ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ab4298d42ce62149a05104a67292a15d8}\label{class_young___einstein_1_1_gra_ab4298d42ce62149a05104a67292a15d8}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!ustawianie\_nowej\_gry@{ustawianie\_nowej\_gry}}
+\index{ustawianie\_nowej\_gry@{ustawianie\_nowej\_gry}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{ustawianie\_nowej\_gry()}{ustawianie\_nowej\_gry()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+ustawianie\+\_\+nowej\+\_\+gry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generowanie nowej gry -\/ metoda ustawia poczatkowy tekst na kartach. Stosowana jest na rozpoczecie kazdego poziomu. 
+
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_afb61aadbfe048d8536269f864d053f6d}\label{class_young___einstein_1_1_gra_afb61aadbfe048d8536269f864d053f6d}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!usuniecie\_losowosci@{usuniecie\_losowosci}}
+\index{usuniecie\_losowosci@{usuniecie\_losowosci}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{usuniecie\_losowosci()}{usuniecie\_losowosci()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+usuniecie\+\_\+losowosci (\begin{DoxyParamCaption}\item[{int}]{akcja\+\_\+wynik }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Usuwa losowosc z gry -\/ nastepuje generowanie nowej liczby na karcie akcji w momnecie gdy zostanie spelniony warunek\+: 0 $>$ akcja + wynik $>$ 20 i 0 $>$ poczekalnia + wynik $>$ 20 lub jesli zostanie spelniony warunek\+: 0 $>$ akcja + poczekalnia + wynik $>$ 20 
+
+
+\begin{DoxyParams}{Parameters}
+{\em akcja\+\_\+wynik} & Pobiera sume kart akcja + wynik\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_ae3061012e602a9c4a6272231ba982baf}\label{class_young___einstein_1_1_gra_ae3061012e602a9c4a6272231ba982baf}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!uzyj\_karty\_czekajacej\_Click@{uzyj\_karty\_czekajacej\_Click}}
+\index{uzyj\_karty\_czekajacej\_Click@{uzyj\_karty\_czekajacej\_Click}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{uzyj\_karty\_czekajacej\_Click()}{uzyj\_karty\_czekajacej\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+uzyj\+\_\+karty\+\_\+czekajacej\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obsluga przycisku \char`\"{}\+WEz KARTe\char`\"{} Jesli w poczeklani kart znajduje sie jakas karta, to mozemy nacisnac przycisk -\/ wez karte -\/ aby jej uzyc. Sprawdzamy czy suma kart poczekalnia + wynik wyjdzie poza zakres od 0 do 20. Jesli wynik sumy znajduje sie w przedziale to karta z poczekalni dodawana jest do karty wyniku i zmniejsza sie liczba dzialan do konca rundy. Jesli natomiast suma wychodzi poza zadany zakres -\/ to pojawia sie komunikat o przegranej grze z mozliwoscia powtorzenia poziomu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a859ac8e2739c761793ec54e68e041243}\label{class_young___einstein_1_1_gra_a859ac8e2739c761793ec54e68e041243}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!wykonaj\_dzialanie\_Click@{wykonaj\_dzialanie\_Click}}
+\index{wykonaj\_dzialanie\_Click@{wykonaj\_dzialanie\_Click}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{wykonaj\_dzialanie\_Click()}{wykonaj\_dzialanie\_Click()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+wykonaj\+\_\+dzialanie\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obsluga przycisku \char`\"{}\+WYKONAJ DZIAl\+ANIE\char`\"{}. Jesli w karcie akcji umieszczona jest jakas liczba, to po uzyciu tego przycisku obecna karta akcji jest dodawana do aktualnej karty wyniku. Jendoczesnie generowana jest nowa karta akcji i zmniejsza sie liczba dzialan w rundzie o jeden. Metoda \char`\"{}czy\+\_\+nastepna\+\_\+runda()\char`\"{} sprawdzam, czy powinna juz nastapic wygrana, czy jeszcze nie. Jesli suma liczb z karty akcji i z karty wyniku da liczbe spoza zakresu od 0 do 20, to pojawia sie komunikat o przegranej z mozliwoscia powtorzenia poziomu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_aca637f92500b58e290c1d3ff5df59da6}\label{class_young___einstein_1_1_gra_aca637f92500b58e290c1d3ff5df59da6}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!zerowanie\_kart@{zerowanie\_kart}}
+\index{zerowanie\_kart@{zerowanie\_kart}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{zerowanie\_kart()}{zerowanie\_kart()}}
+{\footnotesize\ttfamily void Young\+\_\+\+Einstein.\+Gra.\+zerowanie\+\_\+kart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metoda zeruje wszystkie karty. Stosowana w momencie przejscia do nastepnego poziomu badz przegrania. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_young___einstein_1_1_gra_a79b166ecb0276ddc7757c685950edf63}\label{class_young___einstein_1_1_gra_a79b166ecb0276ddc7757c685950edf63}} 
+\index{Young\_Einstein.Gra@{Young\_Einstein.Gra}!components@{components}}
+\index{components@{components}!Young\_Einstein.Gra@{Young\_Einstein.Gra}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily System.\+Component\+Model.\+IContainer Young\+\_\+\+Einstein.\+Gra.\+components = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Required designer variable. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/agnie/\+Desktop/young\+\_\+\+Einstein2/\+Young\+\_\+\+Einstein/Gra.\+cs\item 
+C\+:/\+Users/agnie/\+Desktop/young\+\_\+\+Einstein2/\+Young\+\_\+\+Einstein/Gra.\+Designer.\+cs\end{DoxyCompactItemize}
